@@ -6,7 +6,7 @@
 // This should only take one line of code!
 void set_to_five(int *ptr)
 {
-  // TODO: Your code here.
+	*ptr = 5;
 }
 
 // Assign NULL value to the pointer variable pointed to by dp.
@@ -16,13 +16,14 @@ void set_to_five(int *ptr)
 // This should only take one line of code!
 void initialize_ptr(void **dp)
 {
-  // TODO: Your code here.
-
+	*dp = NULL;
 }
 
 // Swap the values of two int variables, 
 // pointed to by x and y, respectively.
-void swap_int(char *xp, char *yp)
+void swap_int(int *xp,int *yp)
 {
-  // TODO: Your code here.
+	int tmp = *xp;
+	*xp = *yp;
+	*yp = tmp;
 }

@@ -1,5 +1,5 @@
 CC     := gcc
-CFLAGS := -Werror -g -Og
+CFLAGS := -Werror -std=gnu99 -g -Og
 
 
 OBJS := bitfloat.o ptr.o array.o clab_test.o
