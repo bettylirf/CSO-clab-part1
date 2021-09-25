@@ -50,18 +50,17 @@ void bubble_sort(int *arr, int n)
 //Convert the integer to little endian and return the converted int.
 int big_to_little_endian(char *arr)
 {
-  char tmp = *arr;
-  *arr = *(arr + 3);
-  *(arr + 3) = tmp;
-  tmp = *(arr + 1);
-  *(arr + 1) = *(arr + 2);
-  *(arr + 2) = tmp;
+	char tmp = *arr;
+ 	*arr = *(arr + 3);
+	*(arr + 3) = tmp;
+ 	tmp = *(arr + 1);
+ 	*(arr + 1) = *(arr + 2);
+ 	*(arr + 2) = tmp;
 
-  int final_int = 0;
-  int i;
-  for(i = 0; i < 4; i++){
-    final_int = final_int | ((int)(*(arr + i))) << (8*i);
-  }
-  return final_int;
+ 	int final_int = 0;
+	for(int i = 0; i < 4; i++){
+		final_int = final_int | ((int)(*(arr + i))) << (8*i);
+	}
+	return final_int;
 }
 
